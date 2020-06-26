@@ -105,10 +105,10 @@ public class MainActivity extends Activity {
 
         if (tall.getText().toString().getBytes().length <= 0) {
             Toast.makeText(MainActivity.this, "키를 입력해주세요.", Toast.LENGTH_SHORT).show();
-            tall.setSelection(0);
+            tall.setFocusable(true);
         } else if (weight.getText().toString().getBytes().length <= 0) {
             Toast.makeText(MainActivity.this, "몸무게를 입력해주세요.", Toast.LENGTH_SHORT).show();
-            weight.setSelection(0);
+            weight.setFocusable(true);
         } else {
             double tallNum = Double.parseDouble(tall.getText().toString());
             double weightNum = Double.parseDouble(weight.getText().toString());
@@ -158,6 +158,6 @@ public class MainActivity extends Activity {
         }
 
     }
-    
+
 
 }
