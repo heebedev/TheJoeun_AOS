@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/firstPageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <ImageView
+            android:src="@drawable/bmi"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI란 인간의 비만도를 나타내는 지수로, 체중과 키의 관계로 계산된다. "
+            android:textSize="25dp"
+            android:layout_margin="15dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="고도 비만 : 40 이상   \n중등도 비만 (2단계 비만) : 35 - 39.9 \n경도 비만 (1단계 비만) : 30 - 34.9 \n과체중 : 25 - 29.9 \n정상 : 18.5 - 22.9
+ \n저체중 : 18.5 미만"
+            android:textSize="20dp"
+            android:layout_marginLeft="30dp"
+            />
+
+        <Button
+            android:id="@+id/bmiCalcBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 BMI 계산하기"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:textColor="#606268"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondPageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:src="@drawable/bmi"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BIM 계산기"
+            android:textSize="40dp"
+            android:gravity="center"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="키와 몸무게를 입력해주세요."
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="키 : "
+                android:textSize="30dp"
+                android:textAlignment="textEnd"
+                android:gravity="end" />
+
+            <EditText
+                android:id="@+id/tallKeyin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="cm로 입력해주세요."
+                android:inputType="numberDecimal"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="몸무게 : "
+                android:textSize="30dp"
+                android:gravity="end"
+                android:textAlignment="textEnd"
+                />
+
+            <EditText
+                android:id="@+id/weightKeyin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="kg으로 입력해주세요."
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/bmiFindRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결과보기"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="#606268"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="뒤로가기"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="#606268"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/progressPageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        >
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/resultPageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:gravity="center_horizontal"
+        >
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="당신의 BMI는"
+           android:textSize="30dp"
+           android:layout_marginTop="80dp"
+           android:textAlignment="center"
+           android:gravity="center_horizontal">
+       </TextView>
+
+        <TextView
+            android:id="@+id/bmiResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="25.3"
+            android:textSize="60dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/bmiComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아주 잘 관리하고 있군요!"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+
+        <ImageView
+            android:src="@drawable/bmirange"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈으로"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:textColor="#606268"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
