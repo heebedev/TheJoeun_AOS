@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="travleArea">
+        <item>가나</item>
+        <item>뉴질랜드</item>
+        <item>독일</item>
+        <item>리비아</item>
+        <item>미국</item>
+        <item>방글라데시</item>
+        <item>중국</item>
+        <item>태국</item>
+        <item>베트남</item>
+        <item>말레이시아</item>
+        <item>사우디</item>
+        <item>인도</item>
+        <item>터키</item>
+
+
+
+    </string-array>
+
+
+</resources>
