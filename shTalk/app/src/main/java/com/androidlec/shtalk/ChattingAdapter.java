@@ -1,4 +1,4 @@
-package com.androidlec.customadapterview;
+package com.androidlec.shtalk;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,15 +10,15 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WeatherAdapter extends BaseAdapter {
-
+public class ChattingAdapter extends BaseAdapter {
 
     private Context mContext = null;
     private int layout = 0;
-    private ArrayList<Weather> data = null;
+    private ArrayList<Chatting> data = null;
     private LayoutInflater inflater = null;
 
-    public WeatherAdapter(Context mContext, int layout, ArrayList<Weather> data) {
+
+    public ChattingAdapter(Context mContext, int layout, ArrayList<Chatting> data) {
         this.mContext = mContext;
         this.layout = layout;
         this.data = data;
@@ -32,8 +32,7 @@ public class WeatherAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return data.get(position).getDay();
-        //DB의 key 값 이다.
+        return data.get(position).getName();
     }
 
     @Override
@@ -43,25 +42,17 @@ public class WeatherAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
         if(convertView == null) {
             convertView = inflater.inflate(this.layout, parent, false);
         }
 
-        TextView tv_day = convertView.findViewById(R.id.tv_day);
-        ImageView iv_icon = convertView.findViewById(R.id.iv_weather);
-        TextView tv_comment = convertView.findViewById(R.id.tv_comment);
+        ImageView iv_pfimage = convertView.findViewById(R.id.iv_pfimage);
+        TextView tv_name = convertView.findViewById(R.id.tv_name);
+        TextView tv_lastmsg = convertView.findViewById(R.id.tv_lastmsg);
 
-        tv_day.setText(data.get(position).getDay() + " ");
-        iv_icon.setImageResource(data.get(position).getIcon());
-        tv_comment.setText(data.get(position).getComment());
-
-
-        if(position % 2 == 1 ) {
-            convertView.setBackgroundColor(0x5000ff00);
-        } else {
-            convertView.setBackgroundColor((0x2000ff00));
-        }
+        iv_pfimage.setImageResource(data.get(position).getPfimage());
+        tv_name.setText(data.get(position).getName());
+        tv_lastmsg.setText(data.get(position).getLastmsg());
 
 
         return convertView;
