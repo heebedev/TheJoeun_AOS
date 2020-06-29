@@ -38,5 +38,5 @@ public class Weather {
         this.comment = comment;
     }
 
-    
+
 }
