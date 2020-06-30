@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSmall;
     Button btnLarge;
     TextView eText;
+    int fontsize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         btnSmall = findViewById(R.id.btnSmall);
         btnLarge = findViewById(R.id.btnLarge);
 
+
         btnSmall.setOnClickListener(mClickListener);
         btnLarge.setOnClickListener(mClickListener);
+
+        eText = findViewById(R.id.eText);
+        fontsize = (int) eText.getTextSize();
+
 
     }
 
@@ -30,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
     Button.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            eText = findViewById(R.id.eText);
-
             switch (v.getId()) {
                 case R.id.btnSmall :
-                    eText.setTextSize(20);
+                    fontsize -= 5;
+                    eText.setTextSize(fontsize);
                     break;
                 case R.id.btnLarge :
-                    eText.setTextSize(50);
+                    fontsize += 5;
+                    eText.setTextSize(fontsize);
                     break;
             }
 

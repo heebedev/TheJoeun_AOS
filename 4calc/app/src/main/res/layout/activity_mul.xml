@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8CEEA"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/mulFstNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="첫 번째 숫자를 입력하세요."
+        android:inputType="number"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        ></EditText>
+    <EditText
+        android:id="@+id/mulSndNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="두 번째 숫자를 입력하세요."
+        android:inputType="number"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        ></EditText>
+
+    <Button
+        android:id="@+id/mulBtnCal"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계산"
+        android:textStyle="bold"></Button>
+
+    <TextView
+        android:id="@+id/mulTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/mulClose"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="CLOSE" />
+
+</LinearLayout>
