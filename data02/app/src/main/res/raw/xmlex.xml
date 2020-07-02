@@ -1,0 +1,25 @@
+<member_info>
+    <member name="James" age="20">
+        <hobbies>
+            <hobby>수영</hobby>
+            <hobby>요리</hobby>
+        </hobbies>
+        <info>
+            <no>1</no>
+            <id>abcd</id>
+            <pw>1234</pw>
+        </info>
+    </member>
+    <member name="Cathy" age="21">
+        <hobbies>
+            <hobby>독서</hobby>
+            <hobby>등산</hobby>
+        </hobbies>
+        <info>
+            <no>2</no>
+            <id>abcde</id>
+            <pw>12345</pw>
+        </info>
+    </member>
+
+</member_info>
