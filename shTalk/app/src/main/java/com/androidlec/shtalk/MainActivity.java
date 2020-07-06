@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
     private ChattingAdapter adapter = null;
     private ListView listView = null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

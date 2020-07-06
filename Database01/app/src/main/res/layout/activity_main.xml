@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_updata"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="41dp"
+        android:text="UPDATE"
+        app:layout_constraintBottom_toTopOf="@+id/btn_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_insert" />
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="38dp"
+        android:text="INSERT"
+        app:layout_constraintBottom_toTopOf="@+id/btn_updata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="56dp"
+        android:text="SELECT"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete" />
+
+    <TextView
+        android:id="@+id/tv_Result"
+        android:layout_width="297dp"
+        android:layout_height="192dp"
+        android:layout_marginBottom="244dp"
+        android:text="_____________"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_select" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        android:text="DELETE"
+        app:layout_constraintBottom_toTopOf="@+id/btn_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_updata" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

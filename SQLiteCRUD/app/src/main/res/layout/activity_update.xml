@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".InsertActivity">
+
+    <TextView
+        android:id="@+id/infohead"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_gravity="center_horizontal"
+        android:text="학생 정보 수정"
+        android:gravity="center"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/update_id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:hint="학번"
+        android:textAlignment="center"
+        android:enabled="false"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/update_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:hint="이름"
+        android:gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/update_major"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:hint="전공"
+        android:gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/update_pw"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:hint="비밀번호"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/updateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수정"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center" />
+
+
+
+
+</LinearLayout>
